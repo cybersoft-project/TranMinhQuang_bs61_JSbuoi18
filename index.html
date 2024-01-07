@@ -34,8 +34,12 @@
             margin-bottom: 5px !important;
             border-radius: 5px !important;
         }
-        .ketQua{
+
+        .ketQua {
             height: 75px;
+        }
+        .ketNoi{
+            display: none;
         }
     </style>
 </head>
@@ -63,93 +67,104 @@
             </div>
         </nav>
         <div class="tab-content w-100 bg-dark" id="nav-tabContent">
-            <div class="tab-pane fade w-100 px-4 py-3 text-white show active" id="bai1" role="tabpanel"
+            <div class="tab-pane fade w-100 px-4 py-3 text-white show row row-cols-3" id="bai1" role="tabpanel"
                 aria-labelledby="nav-home-tab">
-                <h2 class="fs-4 mb-4">Tinh tien luong nhan vien</h2>
-                <div class="mb-3">
-                    <label for="txt-soNgayDiLam" class="form-label">So ngay:</label>
-                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-soNgayDiLam"
-                        placeholder="Nhap so ngay di lam " />
+                <div class="d-flex row row-cols-3 w-100">
+                    <h2 class="fs-4 mb-4 col-12">Xét điểm tốt nghiệp</h2>
+                    <div class="mb-3 col">
+                        <input type="text " class="form-control" id="txt-diemChuan" placeholder="Nhap diem chuan " />
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select form-select-lg" name="txt-vung" id="txt-vung">
+                            <option selected>Vung</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select form-select-lg" name="txt-vung" id="txt-doiTuong">
+                            <option> Chon doi tuong</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3 col">
+                        <input type="number" class="form-control" name="txt-luongMotNgay" id="txt-diem1"
+                            placeholder="Nhap diem mon 1" />
+                    </div>
+                    <div class="mb-3 col">
+                        <input type="number" class="form-control" name="txt-luongMotNgay" id="txt-diem2"
+                            placeholder="Nhap diem mon 2" />
+                    </div>
+                    <div class="mb-3 col">
+                        <input type="number" class="form-control" name="txt-luongMotNgay" id="txt-diem3"
+                            placeholder="Nhap diem mon 3" />
+                    </div>
+                    <button class="btn btn-primary mt-2" id="btnBai1">In ket qua</button>
+                    <div class="bg-black py-2 px-3 mt-4 ketQua col-12" id="ketQua1"></div>
 
                 </div>
-                <div class="mb-3">
-                    <label for="txt-luongMotNgay" class="form-label">Luong 1 ngay</label>
-                    <input type="text" class="form-control" name="txt-luongMotNgay" id="txt-luongMotNgay"
-                        placeholder="100000" value="100000" readonly />
-                </div>
-                <button class="btn btn-primary mt-2" id="btnBai1">Tinh tien luong</button>
-                <div class="bg-black py-2 px-3 mt-4 ketQua" id="ketQua1"></div>
 
             </div>
             <div class="tab-pane fade w-100 px-4 py-3 text-white" id="bai2" role="tabpanel"
                 aria-labelledby="nav-profile-tab">
-                <h2 class="fs-4 mb-4">Tinh Gia tri trung binh</h2>
-                
-                
-                <div class="mb-3">
-                    <input type="text " class="form-control" name="txt-so1" id="txt-so1"
-                        placeholder="Nhap so thu nhat " />
+                <h2 class="fs-4 mb-4">Tinh tien dien</h2>
+                <div class="mb-3 ">
+                    <input type="text " class="form-control" name="txt-so1" id="txt-tenKhachHang"
+                        placeholder="Nhap ten khach hang " />
                 </div>
                 <div class="mb-3">
-                    <input type="text " class="form-control" name="txt-so2" id="txt-so2"
-                        placeholder="Nhap so thu hai " />
-                </div>
-                <div class="mb-3">
-                    <input type="text " class="form-control" name="txt-so3" id="txt-so3"
-                        placeholder="Nhap so thu ba" />
-                </div>
-                <div class="mb-3">
-                    <input type="text " class="form-control" name="txt-so4" id="txt-so4"
-                        placeholder="Nhap so thu tu " />
-                </div>
-                <div class="mb-3">
-                    <input type="text " class="form-control" name="txt-so5" id="txt-so5"
-                        placeholder="Nhap so thu nam" />
+                    <input type="number " class="form-control" name="txt-so2" id="txt-soDien"
+                        placeholder="Nhap so dien" />
                 </div>
                 <button class="btn btn-primary mt-2" id="btnBai2">In ket qua</button>
                 <div class="bg-black py-2 px-3 mt-4 ketQua" id="ketQua2"></div>
             </div>
             <div class="tab-pane fade w-100 px-4 py-3 text-white" id="bai3" role="tabpanel"
                 aria-labelledby="nav-contact-tab">
-                <h2   h2 class="fs-4 mb-4">Quy doi tien</h2>
-               
-                <div class="mb-3">
-                    <label for="txt-soNgayDiLam" class="form-label">So tien can doi:</label>
-                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-soUSD"
-                        placeholder="Nhap so dollar muon doi " />
+                <h2 h2 class="fs-4 mb-4">Thue thu nhap ca nhan</h2>
 
+                <div class="mb-3 col">
+                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-hoTen"
+                        placeholder="Nhap ho ten cua ban" />
+                </div>
+                <div class="mb-3 col">
+                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-tongThuNhap"
+                        placeholder="Nhap tong thu nhap" />
+                </div>
+                <div class="mb-3 col">
+                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-soNguoiPhuThuoc"
+                        placeholder="Nhap so nguoi phu thuoc" />
                 </div>
                 <button class="btn btn-primary mt-2" id="btnBai3">Chuyen doi sang VND</button>
                 <div class="bg-black py-2 px-3 mt-4 ketQua" id="ketQua3"></div>
             </div>
-            <div class="tab-pane fade w-100 px-4 py-3 text-white " id="bai4" role="tabpanel">
-                <h2 class="fs-4 mb-4">Tinh chu vi, dien tich hinh chu nhat</h2>
-                <div class="mb-3">
-                    <label for="txt-soNgayDiLam" class="form-label">Chieu dai:</label>
-                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-chieuDai"
-                        placeholder="Nhap chieu dai" />
+            <div class="tab-pane fade w-100 px-4 py-3 text-white show active " id="bai4" role="tabpanel">
+                <h2 class="fs-4 mb-4">Tinh tien truyen hinh cap</h2>
+                <select class="form-select form-select-lg mb-4" name="txt-vung" id="txt-loaiKhachHang">
+                    <option value="-1"> Chon loai khach hang</option>
+                    <option value="0">Nha dan</option>
+                    <option value="1">Doanh nghiep</option>
+                </select>
+                <div class="ketNoi mb-3">
+                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-soKetNoi"
+                        placeholder="Nhap so ket not" />
+
+                </div>
+                <div class="mb-3 ">
+                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-maKhachHang"
+                        placeholder="Nhap ma khach hang" />
 
                 </div>
                 <div class="mb-3">
-                    <label for="txt-soNgayDiLam" class="form-label">Chieu rong: </label>
-                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-chieuRong"
-                        placeholder="Nhap chieu rong:" />
+                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-soKenh"
+                        placeholder="Nhap so kenh cao cap" />
 
                 </div>
                 <button class="btn btn-primary mt-2" id="btnBai4">In ket qua</button>
                 <div class="bg-black py-2 px-3 mt-4 ketQua" id="ketQua4"></div>
-            </div>
-            <div class="tab-pane fade w-100 px-4 py-3 text-white" id="bai5" role="tabpanel"
-                aria-labelledby="nav-contact-tab">
-                <h2 class="fs-4 mb-4">Tinh tong 2 ki so</h2>
-                <div class="mb-3">
-                    <label for="txt-soNgayDiLam" class="form-label">Nhap so:</label>
-                    <input type="text " class="form-control" name="txt-soNgayDiLam" id="txt-kySo"
-                        placeholder="Nhap so co hai chu so" />
-
-                </div>
-                <button class="btn btn-primary mt-2" id="btnBai5">In ket qua</button>
-                <div class="bg-black py-2 px-3 mt-4 ketQua" id="ketQua5"></div>
             </div>
         </div>
     </div>
