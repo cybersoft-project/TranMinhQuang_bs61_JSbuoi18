@@ -1,35 +1,4 @@
-body {
+body{
     background-color: #12181b;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.container {
-    height: 100vh;
-}
-
-.nav {
-    height: 70vh;
-    margin-top: 5px;
-}
-
-.tab-content {
-    height: 70vh;
-}
-
-.nav-link {
-    width: 100px;
-    margin-bottom: 5px !important;
-    border-radius: 5px !important;
-}
-
-.ketQua {
-    height: 75px;
-}
-.ketNoi{
-    display: none;
+    color: white;
 }
