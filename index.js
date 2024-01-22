@@ -173,4 +173,3 @@ document.getElementById('btnBai1').onclick = baiTap1;
 document.getElementById('btnBai2').onclick = baiTap2;
 document.getElementById('btnBai3').onclick = baiTap3;
 document.getElementById('btnBai4').onclick = baiTap4;
-
